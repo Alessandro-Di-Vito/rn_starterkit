@@ -1,2 +1,2 @@
-export * from './HomeScreen';
-export * from './DetailsScreen';
+export * from './detail/detailsController';
+export * from './home/homeController';

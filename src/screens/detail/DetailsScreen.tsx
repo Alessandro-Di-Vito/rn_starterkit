@@ -1,13 +1,14 @@
 import React from 'react';
 import { ActivityIndicator, Button, StyleSheet, Text, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { ROUTES, type RootStackParamList } from '../navigation/routes';
-import { loadPostDetails } from './controllers';
+import { ROUTES, type RootStackParamList } from '../../navigation/routes';
+
 import {
   detailsReducer,
   initialDetailsState,
-} from '../reducers';
-import { colors, spacing, typography } from '../theme';
+} from '../../reducers';
+import { colors, spacing, typography } from '../../theme';
+import { loadPostDetails } from './detailsController';
 
 type Props = NativeStackScreenProps<RootStackParamList, typeof ROUTES.DETAILS>;
 

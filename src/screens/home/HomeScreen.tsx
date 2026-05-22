@@ -1,12 +1,13 @@
 import React from 'react';
 import { ActivityIndicator, FlatList, StyleSheet, Text, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { ROUTES, type RootStackParamList } from '../navigation/routes';
-import type { Post } from '../models';
-import { PostListItem } from '../features';
-import { loadHomePosts } from './controllers';
-import { homeReducer, initialHomeState } from '../reducers';
-import { colors, spacing, typography } from '../theme';
+import { loadHomePosts } from './homeController';
+import { homeReducer, initialHomeState } from '../../reducers';
+import { RootStackParamList, ROUTES } from '../../navigation';
+import { PostListItem } from '../../features/posts/components/PostListItem';
+import { Post } from '../../models';
+import { colors, spacing, typography } from '../../theme';
+
 
 type Props = NativeStackScreenProps<RootStackParamList, typeof ROUTES.HOME>;
 
